@@ -52,7 +52,6 @@ int *ask_for_position()
     for (int i = 0; i < 2; ++i) {
         cin >> pos[i];
     }
-    // HANDLING NOT NUMERIC VALUES
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -171,9 +170,7 @@ int main()
     int moves = 0;
     bool player_did_choose = false;
 
-    // GAME LOOP
     while (true) {
-        // FIRST PLAY
         if (!player_did_choose) {
             printf("Choose\nO or X :: ");
             cin >> player;
@@ -191,7 +188,6 @@ int main()
             player_did_choose = true;
         }
 
-        // THE REST OF THE GAME
         clear_term();
         print_board(board);
 
